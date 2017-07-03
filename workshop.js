@@ -109,7 +109,20 @@ function capitalize(inputString) {
 }
 
 function sumOfNumbers(arrayOfNumbers) {
-
+    if (typeof arrayOfNumbers !== "object") {
+        return;
+    }
+    for (var i = 0; i <arrayOfNumbers.length; i ++) {
+        if (typeof arrayOfNumbers[i] !== "number") {
+            return;
+        }
+    }
+    
+    var temp = 0;
+    for (var i = 0; i < arrayOfNumbers.length; i ++) {
+        temp = temp + arrayOfNumbers[i];
+    }
+    return temp;
 }
 
 function uniqueElements(array1, array2) {
