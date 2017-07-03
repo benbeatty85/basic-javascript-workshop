@@ -57,8 +57,25 @@ function calculator(operation, num1, num2) {
 }
 
 function repeatString(inputString, numRepetitions) {
-    
-}
+ 
+     if (typeof inputString === "string" && typeof numRepetitions === "number") {
+        if (numRepetitions <=  0 || inputString.length === 0) {
+             return "";
+         }
+         
+         else {
+             var stringRepeated = ""
+             for (var i = 0; i< numRepetitions; i++) {
+                 stringRepeated += inputString;
+             }
+             return stringRepeated;
+         }
+     }
+     
+     else {
+         return undefined;
+     }
+  }
 
 function reverseString(inputString) {
     return inputString.split('').reverse().join('');
@@ -81,7 +98,6 @@ function sumOfNumbers(arrayOfNumbers) {
 }
 
 function uniqueElements(array1, array2) {
-
 }
 
 function isPalindrome(inputString) {
