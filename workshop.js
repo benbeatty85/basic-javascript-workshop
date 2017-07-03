@@ -7,7 +7,11 @@ function firstLetter(inputString) {
 }
 
 function lastLetter(inputString) {
-
+    if (inputString === undefined) {
+        return undefined;
+    } else {
+        return inputString[inputString.length - 1];
+    }
 }
 
 function letterAtPosition(inputString, position) {
