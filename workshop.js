@@ -85,11 +85,14 @@ function uniqueElements(array1, array2) {
 }
 
 function isPalindrome(inputString) {
-
+    var re = /[\W_]/g;
+    var lowerString = inputString.toLowerCase().replace(re, "");
+    var reverseString = lowerString.split("").reverse().join("");
+    return reverseString === lowerString;
 }
 
 function wrapCharacter(inputString) {
-
+    
 }
 
 function wrapWord(inputString) {
