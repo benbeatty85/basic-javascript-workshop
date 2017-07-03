@@ -53,11 +53,11 @@ function calculator(operation, num1, num2) {
 }
 
 function repeatString(inputString, numRepetitions) {
-
+    
 }
 
 function reverseString(inputString) {
-
+    return inputString.split('').reverse().join('');
 }
 
 function longestWord(inputString) {
