@@ -82,7 +82,22 @@ function reverseString(inputString) {
 }
 
 function longestWord(inputString) {
-    
+    if (inputString.length === 0) {
+         return "";
+     }
+     
+     else {
+         var splitString = inputString.split(" " || "," || ";");
+         var longest = 0;
+         var word = null;
+         for (var i = 0; i < splitString.length; i++) {
+             if (longest < splitString[i].length) {
+                 longest = splitString[i].length;
+                 word = splitString[i];
+            }
+         }
+         return word;
+     }
 }
 
 function capitalize(inputString) {
