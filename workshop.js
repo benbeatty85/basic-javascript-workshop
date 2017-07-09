@@ -65,7 +65,7 @@ function repeatString(inputString, numRepetitions) {
          
          else {
              var stringRepeated = ""
-             for (var i = 0; i< numRepetitions; i++) {
+             for (var i = 0; i < numRepetitions; i++) {
                  stringRepeated += inputString;
              }
              return stringRepeated;
@@ -110,11 +110,11 @@ function capitalize(inputString) {
 
 function sumOfNumbers(arrayOfNumbers) {
     if (typeof arrayOfNumbers !== "object") {
-        return;
+        return undefined;
     }
     for (var i = 0; i <arrayOfNumbers.length; i ++) {
         if (typeof arrayOfNumbers[i] !== "number") {
-            return;
+            return undefined;
         }
     }
     
@@ -126,7 +126,21 @@ function sumOfNumbers(arrayOfNumbers) {
 }
 
 function uniqueElements(array1, array2) {
+    if (typeof (array1) === "object" && typeof (array2) === "object") {
+        var unique = [];
+        array1.forEach(function(val) {
+            if (array2.indexOf(val) < 0) unique.push(val);
+        });
+        array2.forEach(function(val) {
+            if (array1.indexOf(val) < 0) unique.push(val); 
+        });
+        return unique;
+    } else {
+        return undefined;
+    }
 }
+
+uniqueElements();
 
 function isPalindrome(inputString) {
     var re = /[\W_]/g;
