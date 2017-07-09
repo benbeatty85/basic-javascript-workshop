@@ -143,10 +143,10 @@ function uniqueElements(array1, array2) {
 uniqueElements();
 
 function isPalindrome(inputString) {
-    var re = /[\W_]/g;
-    var lowerString = inputString.toLowerCase().replace(re, "");
-    var reverseString = lowerString.split("").reverse().join("");
-    return reverseString === lowerString;
+    var strReverse;
+    inputString = inputString.toLowerCase().replace(/\W|_-+/g,'');
+    strReverse = inputString.split('').reverse().join('');
+    return strReverse === inputString;
 }
 
 function wrapCharacter(inputString) {
